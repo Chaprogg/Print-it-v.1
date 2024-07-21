@@ -30,20 +30,20 @@ let arrow_right = document.querySelector(".arrow_right")
 	console.log(slides.length)
 	let dots = document.querySelector(".dots")
 
-	let createSpan1 = document.createElement("span")
-	dots.appendChild(createSpan1)
-	createSpan1.classList.add("dot")
+	let spanBullet1 = document.createElement("span")
+	dots.appendChild(spanBullet1)
+	spanBullet1.classList.add("dot")
 
-	let createSpan2 = document.createElement("span")
-	dots.appendChild(createSpan2)
-	createSpan2.classList.add("dot")
+	let spanBullet2 = document.createElement("span")
+	dots.appendChild(spanBullet2)
+	spanBullet2.classList.add("dot")
 	
 	
-	let createSpan3 = document.createElement("span")
-	dots.appendChild(createSpan3)
-	createSpan3.classList.add("dot")
+	let spanBullet3 = document.createElement("span")
+	dots.appendChild(spanBullet3)
+	spanBullet3.classList.add("dot")
 	
-	let createSpan4 = document.createElement("span")
-	dots.appendChild(createSpan4)
-	createSpan4.classList.add("dot")
+	let spanBullet4 = document.createElement("span")
+	dots.appendChild(spanBullet4)
+	spanBullet4.classList.add("dot")
 	
