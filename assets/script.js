@@ -19,3 +19,11 @@ const slides = [
 
 let arrow_left = document.querySelector(".arrow_left")
 let arrow_right = document.querySelector(".arrow_right")
+	
+	arrow_left.addEventListener("click", () => {
+		console.log(arrow_left)
+	})
+
+	arrow_right.addEventListener("click", () => {
+		console.log(arrow_right)
+	})
