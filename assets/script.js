@@ -27,3 +27,23 @@ let arrow_right = document.querySelector(".arrow_right")
 	arrow_right.addEventListener("click", () => {
 		console.log(arrow_right)
 	})
+	console.log(slides.length)
+	let dots = document.querySelector(".dots")
+
+	let createSpan1 = document.createElement("span")
+	dots.appendChild(createSpan1)
+	createSpan1.classList.add("dot")
+
+	let createSpan2 = document.createElement("span")
+	dots.appendChild(createSpan2)
+	createSpan2.classList.add("dot")
+	
+	
+	let createSpan3 = document.createElement("span")
+	dots.appendChild(createSpan3)
+	createSpan3.classList.add("dot")
+	
+	let createSpan4 = document.createElement("span")
+	dots.appendChild(createSpan4)
+	createSpan4.classList.add("dot")
+	
