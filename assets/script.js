@@ -18,4 +18,4 @@ const slides = [
 ]
 
 let arrow_left = document.querySelector(".arrow_left")
-let arrow_right = document.querySelector("arrow_right")
+let arrow_right = document.querySelector(".arrow_right")
