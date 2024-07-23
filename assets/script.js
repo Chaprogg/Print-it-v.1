@@ -17,33 +17,24 @@ const slides = [
 	}
 ]
 
+
+let banner_img = document.querySelector(".banner-img")
 let arrow_left = document.querySelector(".arrow_left")
 let arrow_right = document.querySelector(".arrow_right")
-	
-	arrow_left.addEventListener("click", () => {
-		console.log(arrow_left)
-	})
+let dots = document.querySelector(".dots")
+let activDot = 0
 
-	arrow_right.addEventListener("click", () => {
-		console.log(arrow_right)
-	})
-	console.log(slides.length)
-	let dots = document.querySelector(".dots")
+function dotsDisplay () {
+	for (let i =0; i < slides.length; i++) {
+		let dot = document.createElement("span")
+		dot.classList.add("dot")
+		dots.appendChild(dot)
+	
 
-	let spanBullet1 = document.createElement("span")
-	dots.appendChild(spanBullet1)
-	spanBullet1.classList.add("dot")
+		if (i == activDot) {
+			dot.classList.add("dot_selected")
+		}
+	}
+}
 
-	let spanBullet2 = document.createElement("span")
-	dots.appendChild(spanBullet2)
-	spanBullet2.classList.add("dot")
-	
-	
-	let spanBullet3 = document.createElement("span")
-	dots.appendChild(spanBullet3)
-	spanBullet3.classList.add("dot")
-	
-	let spanBullet4 = document.createElement("span")
-	dots.appendChild(spanBullet4)
-	spanBullet4.classList.add("dot")
-	
+dotsDisplay()
