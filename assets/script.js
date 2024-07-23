@@ -45,5 +45,15 @@ function arrow_rightSelect () {
 	})
 
 }
+
+function arrow_leftSelect () {
+	arrow_left.addEventListener("click",() => {
+		activImg--
+		bannerImg.src = slides[activImg].image
+	})
+
+}
+
 dotsDisplay()
 arrow_rightSelect()
+arrow_leftSelect()
