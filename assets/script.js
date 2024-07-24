@@ -22,17 +22,17 @@ let bannerImg = document.querySelector(".banner-img")
 let arrow_left = document.querySelector(".arrow_left")
 let arrow_right = document.querySelector(".arrow_right")
 let dots = document.querySelector(".dots")
-let activDot = 0
-let activImg = 0
+let index = 0
+console.log(slides.length)
 
 function dotsDisplay () {
 	for (let i =0; i < slides.length; i++) {
-		let dot = document.createElement("span")
+		const dot = document.createElement("span")
 		dot.classList.add("dot")
 		dots.appendChild(dot)
 	
 
-		if (i == activDot) {
+		if (i == index) {
 			dot.classList.add("dot_selected")
 		}
 	}
@@ -40,20 +40,39 @@ function dotsDisplay () {
 
 function arrow_rightSelect () {
 	arrow_right.addEventListener("click",() => {
-		activImg++
-		bannerImg.src = slides[activImg].image
+		const bulletpointTab = document.querySelectorAll(".dots .dot")
+		bulletpointTab[index].classList.remove("dot_selected")
+		index++
+		// si i superieur a l'index j'enleve une chaine et je me place a la chaine 0
+		if (index > slides.length -1) {
+			index = 0
+		}
+		
+		bannerImg.src = slides[index].image
+		bulletpointTab[index].classList.add("dot_selected")
 	})
 
 }
 
 function arrow_leftSelect () {
 	arrow_left.addEventListener("click",() => {
-		activImg--
-		bannerImg.src = slides[activImg].image
+		const bulletpointTab = document.querySelectorAll(".dots .dot")
+		bulletpointTab[index].classList.remove("dot_selected")
+		index--
+		// si i est inferieur 0 alors je descdent  l'index d'une chaine  
+		if (index < 0  ) {
+			index = slides.length -1 
+		}
+		
+		bannerImg.src = slides[index].image
+		bulletpointTab[index].classList.add("dot_selected")
+		
 	})
 
 }
-
+function main () { 
 dotsDisplay()
 arrow_rightSelect()
 arrow_leftSelect()
+}
+ main()
