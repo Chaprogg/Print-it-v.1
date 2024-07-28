@@ -16,19 +16,19 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-let bannerImg = document.querySelector(".banner-img")
+
+const bannerImg = document.querySelector(".banner-img")
 let tagLineLink = document.querySelector("#banner p")
+const dotsLinkS = document.querySelector(".dots")
+
 let indexTabSlides = 0
-console.log(slides.length)
 
 function dotsDisplay () {
 	// J'affiche un bullet-point par unité de chaine correspondant à la valeur du tableau
 	for (let i = 0; i < slides.length; i++) {
-		let dotsLinkS = document.querySelector(".dots")
 		const dotsSpan = document.createElement("span")
 		dotsLinkS.appendChild(dotsSpan)
 		dotsSpan.classList.add("dot")
-
 		// Égalité Abstraite: Si i correspond à l'index alors je change le backgroud-color de la bullet-point correspondante
 		if (i == indexTabSlides) {
 			dotsSpan.classList.add("dot_selected")
@@ -78,8 +78,8 @@ function arrow_leftSelect () {
 }
 
 function main () { 
-dotsDisplay()
-arrow_rightSelect()
-arrow_leftSelect()
+	dotsDisplay()
+	arrow_rightSelect()
+	arrow_leftSelect()
 }
 main()
